@@ -5,7 +5,7 @@ from . import models
 
 @admin.register(models.Image)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('title', '_id', 'status', 'slug', 'author')
+    list_display = ('title', '_id', 'status', 'slug')
     prepopulated_fields = {'slug': ('title',), }
 
 admin.site.register(models.Category)

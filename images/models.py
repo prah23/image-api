@@ -30,6 +30,4 @@ class Image(models.Model):
     )
     slug = models.SlugField(max_length=250, unique_for_date='created')
     created = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(User, on_delete=models.PROTECT, 
-                               related_name='author')
     status = models.CharField(max_length=11, choices=OPTIONS, default='active')
